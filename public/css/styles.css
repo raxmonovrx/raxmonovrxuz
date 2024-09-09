@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Archivo Black", sans-serif;
+}
+img::selection {
+    display: none;
+}
+body {
+    background-color: black;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    justify-items: start;
+    gap: 20px;
+    padding: 64px 16px;
+    position: relative;
+}
+.video-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* #backgroundVideo, */
+.backgroundImage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-size: cover;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    /* padding: 20px; */
+}
+.profile__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.profile__icon img {
+    width: 96px;
+    border-radius: 50%;
+    /* border: 2px solid #fff; */
+}
+.profile__icon h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.profile__icon h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.myworks {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.mywork {
+    width: 500px;
+    height: 70px;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000025;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.mywork:hover {
+    transform: scaleX(1.05);
+}
+.mywork:active {
+    transform: scale(1);
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 50px;
+}
+.socials a {
+    display: flex;
+    height: 24px;
+    width: 24px;
+    transition: 0.2s;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+.socials a img {
+    width: 24px;
+    height: 24px;
+}
+#changeThemeBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(1);
+    }
+}
+.logInBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1150px) {
+    #changeThemeBtn {
+        position: relative;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 860px) {
+    .logInBtn {
+        position: absolute;
+    }
+}
+
+@media (max-width: 660px) {
+    .mywork {
+        width: 400px;
+    }
+    .mywork:hover {
+        transform: scaleX(1);
+    }
+    .mywork:active {
+        transform: scale(0.98);
+    }
+    #changeThemeBtn {
+        &:hover {
+            transform: scale(1);
+        }
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .mywork {
+        width: 350px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        padding: 0;
+        margin-top: 20px;
+    }
+    .mywork {
+        width: 300px;
+        font-size: 16px;
+    }
+}
